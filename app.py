@@ -22,7 +22,7 @@ def main():
     st.set_page_config(page_title='Streamlit Multi-page')  # or st.title('Streamlit Multi-page')
     st.header('MWS _ ADM _ Loan ')
     st.write(my_variable)
-    st.write(pd.DataFrame({'Students Name': ['Maya_2222','mohammad_22222','hussam_el_deen_221557']}))
+    st.write(pd.DataFrame({'Students Name': ['Maia_219224','mohammad_223320','hussam_el_deen_221557']}))
 
 #-----------------------------------------------------------------------
 
