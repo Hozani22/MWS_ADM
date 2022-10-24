@@ -97,19 +97,19 @@ Y_pred = model.predict(X)
 # 
 st.subheader('معايير التقييم')
 
-dbayes = {'" bayes result "': [100 * accuracy_score(Y_test,Y_pred),
-                    100 * precision_score(Y_test,Y_pred,average='macro'),
-                    100 * recall_score(Y_test,Y_pred,average='macro'),
-                    100*f1_score(Y_test,Y_pred,average='macro')]}
+dbayes = {'" bayes result "': [100 * accuracy_score(Y,Y_pred),
+                    100 * precision_score(Y,Y_pred,average='macro'),
+                    100 * recall_score(Y,Y_pred,average='macro'),
+                    100*f1_score(Y,Y_pred,average='macro')]}
 
 dbayes1 = {'': ['accuracy_score',
             'precision_score',
             'Recall_score',
             'F1_score'],
-     '" bayes result "': [100 * accuracy_score(Y_test,Y_pred),
-                    100 * precision_score(Y_test,Y_pred,average='macro'),
-                    100 * recall_score(Y_test,Y_pred,average='macro'),
-                    100*f1_score(Y_test,Y_pred,average='macro')]}
+     '" bayes result "': [100 * accuracy_score(Y,Y_pred),
+                    100 * precision_score(Y,Y_pred,average='macro'),
+                    100 * recall_score(Y,Y_pred,average='macro'),
+                    100*f1_score(Y,Y_pred,average='macro')]}
 
 # Feature Scaling
 sc = StandardScaler()
