@@ -38,6 +38,15 @@ model.fit(X_train, Y_train)
 Y_pred = model.predict(X_test)
 
 
+# Making the Confusion Matrix     #حساب مصفوفة الارتباك
+cf_matrix = confusion_matrix(Y_test,Y_pred)
+
+st.write(cf_matrix)
+
+#رسم مصفوفة الارتباك
+fig = plt.figure(figsize=(8, 4))
+sns.heatmap(cf_matrix, annot=True)
+st.pyplot(fig)
 
 st.subheader(' معايير التقييم ')
 dDecisionTree = {'" DecisionTree result "': [100 * accuracy_score(Y_test,Y_pred),
