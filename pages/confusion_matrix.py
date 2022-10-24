@@ -26,7 +26,6 @@ Y = loan_data_conv['Loan_Status']
 
 st.subheader("X Data"); st.dataframe(X)
 st.subheader("Y Data"); st.dataframe(Y)
-st.subheader("Bayes")
 model=CategoricalNB()
 model.fit(X,Y)
 
