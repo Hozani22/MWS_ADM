@@ -22,14 +22,7 @@ my_variable = "Home page"
 def main():
     st.set_page_config(page_title='Streamlit Multi-page')  # or st.title('Streamlit Multi-page')
     st.header('MWS _ ADM _ Loan ')
-    #st.subheader('Was the tutorial helpful?')
     st.write(my_variable)
-    #filterValue = st.selectbox(["option1", "option2", "option3"])
-    #df = df[df["Type"]==filterValue]
-
-    choice = st.sidebar.selectbox("Submenu",["Pandas","Tensforflow"])
-    if choice == "Pandas":
-        st.subheader("Pandas")
 
 #-----------------------------------------------------------------------
 
