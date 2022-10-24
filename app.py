@@ -20,7 +20,7 @@ my_variable = "Home page"
 
 def main():
     st.set_page_config(page_title='Streamlit Multi-page')  # or st.title('Streamlit Multi-page')
-    st.header('MWS _ ADM _ Loan ')
+    st.header('MWS _ ADM _ Loan  Dr.BASSEL MUSTAFFA ALKHATIB')
     st.write(my_variable)
     st.write(pd.DataFrame({'Students Name': ['Maia_219224','mohammad_223320','hussam_el_deen_221557']}))
 
