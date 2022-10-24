@@ -39,8 +39,19 @@ Y_pred = model.predict(X_test)
 
 
 
-# معايير التقييم
-st.write('accuracy: ',100 * accuracy_score(Y_test,Y_pred))
-st.write('precision: ',100 * precision_score(Y_test,Y_pred,average='macro'))
-st.write('Recall: ',100 * recall_score(Y_test,Y_pred,average='macro'))
-st.write('F1: ',100*f1_score(Y_test,Y_pred,average='macro'))
+st.subheader(' معايير التقييم ')
+dDecisionTree = {'" DecisionTree result "': [100 * accuracy_score(Y_test,Y_pred),
+                    100 * precision_score(Y_test,Y_pred,average='macro'),
+                    100 * recall_score(Y_test,Y_pred,average='macro'),
+                    100*f1_score(Y_test,Y_pred,average='macro')]}
+
+dDecisionTree1 = {'': ['accuracy_score',
+            'precision_score',
+            'Recall_score',
+            'F1_score'],
+     '" DecisionTree result "': [100 * accuracy_score(Y_test,Y_pred),
+                    100 * precision_score(Y_test,Y_pred,average='macro'),
+                    100 * recall_score(Y_test,Y_pred,average='macro'),
+                    100*f1_score(Y_test,Y_pred,average='macro')]}
+
+st.write(pd.DataFrame(data=dDecisionTree1))
