@@ -70,7 +70,6 @@ ax1.set_title('original classes distribution', fontsize = 14)
 ax1.pie(x = cv, labels = labels, autopct = '%1.1f%%', shadow = True, startangle = 90)
 st.pyplot(fig1)
 
-
 st.subheader("موازنة الصفوف بإضافة أمثلة جديدة")
 
 #انشاء غرض
@@ -94,8 +93,11 @@ st.pyplot(fig1)
 
 Y_pred = model.predict(X)
 
-# 
 st.subheader('معايير التقييم')
+st.write('\naccuracy: {:.2f}\n'.format(100*accuracy_score(Y, Y_pred)))
+st.write('\nprecision: {:.2f}\n'.format(100*precision_score(Y, Y_pred,average='macro')))
+st.write('\nRecall: {:.2f}\n'.format(100*recall_score(Y, Y_pred, average='macro')))
+st.write('\nF1: {:.2f}\n'.format(100*f1_score(Y,Y_pred,average='macro')))
 
 dbayes = {'" bayes result "': [100 * accuracy_score(Y,Y_pred),
                     100 * precision_score(Y,Y_pred,average='macro'),
