@@ -60,10 +60,23 @@ Y_pred = model.predict(X_test)
 
 # معايير التقييم
 st.subheader(' KNN  معايير التقييم')
-st.write('accuracy_score: ',100 * accuracy_score(Y_test,Y_pred))
-st.write('precision_score: ',100 * precision_score(Y_test,Y_pred,average='macro'))
-st.write('Recall_score: ',100 * recall_score(Y_test,Y_pred,average='macro'))
-st.write('F1_score: ',100*f1_score(Y_test,Y_pred,average='macro'))
+
+dKNN = {'" KNN result "': [100 * accuracy_score(Y_test,Y_pred),
+                    100 * precision_score(Y_test,Y_pred,average='macro'),
+                    100 * recall_score(Y_test,Y_pred,average='macro'),
+                    100*f1_score(Y_test,Y_pred,average='macro')]}
+
+dKNN1 = {'': ['accuracy_score',
+            'precision_score',
+            'Recall_score',
+            'F1_score'],
+     '" KNN result "': [100 * accuracy_score(Y_test,Y_pred),
+                    100 * precision_score(Y_test,Y_pred,average='macro'),
+                    100 * recall_score(Y_test,Y_pred,average='macro'),
+                    100*f1_score(Y_test,Y_pred,average='macro')]}
+
+st.write(pd.DataFrame(data=dKNN1))
+
 
 
 #st.table(dataset.iloc[0:10])
